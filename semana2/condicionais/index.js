@@ -111,70 +111,98 @@
       //2-
       
 
-      //const nomeCompleto      = prompt("Qual o seu nome completo?")
-      const tipoDoJogo        = prompt("Qual o tipo do jogo? IN indica internacional; e DO indica doméstico".toUpperCase())
-      const etapaDoJogo       = prompt("Qual a etapa do jogo? SF-indica semi-final; DT-indica decisão de terceiro lugar; FI-indica final")
-      const categoriaDoJogo   = prompt("Qual a categoria? 1,2,3 ou 4")
-      //const quantIngresso     = Number(prompt("Quantos ingressos você deseja?"))
-    
-      //checkando valor do ingresso doméstico
-      let valorIngressoDomestico = 0
-
-      if(tipoDoJogo === 'do' && etapaDoJogo ==='dt' && categoriaDoJogo === '1'){
-          valorIngressoDomestico = 660.00
-      } else if (tipoDoJogo === 'do' && etapaDoJogo ==='dt' && categoriaDoJogo === '2'){
-          valorIngressoDomestico = 440.00
-      } else if(tipoDoJogo === 'do' && etapaDoJogo ==='dt' && categoriaDoJogo === '3'){
-          valorIngressoDomestico =330.00
-      } else{
-          valorIngressoDomestico = 170.00
-      }
-
-      //checkando o valor do ingresso internacional
-      let valorIngressoDomesticoSemiFinal= 0
-
-      if (tipoDoJogo === 'do' && etapaDoJogo ==='sf' && categoriaDoJogo === '1'){
-        valorIngressoDomestico = 1320.00
-      } else if (tipoDoJogo === 'do' && etapaDoJogo ==='sf' && categoriaDoJogo === '2'){
-        valorIngressoDomestico = 880.00
-      } else if(tipoDoJogo === 'do' && etapaDoJogo ==='sf' && categoriaDoJogo === '3'){
-        valorIngressoDomestico = 550.00
-      } else{
-        valorIngressoDomestico = 220.00
-      }
-
-      let valorIngressoDomesticoFinal= 0
-
-      if (tipoDoJogo === 'do' && etapaDoJogo ==='fi' && categoriaDoJogo === '1'){
-        valorIngressoDomestico = 1980.00
-      } else if (tipoDoJogo === 'do' && etapaDoJogo ==='fi' && categoriaDoJogo === '2'){
-        valorIngressoDomestico = 1320.00
-      } else if(tipoDoJogo === 'do' && etapaDoJogo ==='fi' && categoriaDoJogo === '3'){
-        valorIngressoDomestico = 880.00
-      } else{
-        valorIngressoDomestico = 330.00
-      }
-
+      let nomeCompleto      = prompt("Qual o seu nome completo?")
+      let tipoDoJogo        = prompt("Qual o tipo do jogo? [IN]-internacional [DO] doméstico")
+      let etapaDoJogo       = prompt("Qual a etapa do jogo? [SF]Semi-final; [DT]Decisão de 3°lugar[FI]Final")
+      let categoriaDoJogo   = prompt("Qual a categoria? 1,2,3 ou 4")
+      let quantIngresso     = Number(prompt("Quantos ingressos você deseja?"))
       
+      let valorIngresso
+      let valorTotal = valorIngresso * quantIngresso
 
-      
+      switch(etapaDoJogo){
+        case 'SF':
+          etapaDoJogo = "Semi-Final"
+            switch (categoriaDoJogo) {
+              case '1':
+                valorIngresso = 1320
+                break;
+              case '2':
+                valorIngresso = 880
+                break;
+              case '3':
+                valorIngresso = 550
+                break;
+              case '4':
+                valorIngresso = 220
+                break;
+              default:
+                break;
+          }
+           
+           break;
+        case 'DT':
+          etapaDoJogo ="Disputa 3° Lugar"
+            switch (categoriaDoJogo) {
+              case '1':
+                valorIngresso = 660
+                break;
+              case '2':
+                valorIngresso = 440
+                break;
+              case '3':
+                valorIngresso =330
+                break;
+              case '4':
+                valorIngresso = 170
+                break;
+              default:
+                break;      
+            }
+          break;
+        case 'FI':
+          etapaDoJogo ="Finais"
+          switch (categoriaDoJogo) {
+            case '1':
+              valorIngresso = 1980
+              break;
+            case '2':
+              valorIngresso =1320
+              break;
+            case '3':
+              valorIngresso = 880
+              break;
+            case '4':
+              valorIngresso = 330            
+              break;
+            default:
+              break;
+          }
+        default:
+          break;
+      }
 
-
+      if(tipoDoJogo === 'IN'){
+        tipoDoJogo = 'Internacional'
+        valorIngresso = valorIngresso * 4.10
+      } else {
+        tipoDoJogo = 'Doméstico'
+      }
        
-      /*
-      console.log("---Dados da compra---")
-      console.log(`Nome do cliente: ${nomeCompleto}`)
-      console.log(`Tipo do jogo: ${tipoDoJogo}`)
-      console.log(`Etapa do jogo: ${etapaDoJogo}`)
-      console.log(`Categoria ${categoria}`)
-      console.log(`Quantidade de ingressos ${quantIngresso}`)
-      console.log("---Valores---")
-      console.log(`Valor do ingresso: ${valorIngresso}`)
-      console.log(`Valor total: ${valorTotal}`)
-*/
-
-
-
-
-
       
+      console.log("----Dados da compra----")
+      console.log(`Nome do cliente : ${nomeCompleto}`)
+      console.log(`Tipo do jogo : ${tipoDoJogo}`)
+      console.log(`Etapa do jogo : ${etapaDoJogo}`)
+      console.log(`Categoria : ${categoriaDoJogo}`)
+      console.log(`Quantidade de ingressos : ${quantIngresso}`)
+      console.log("----Valores----")
+      console.log(`Valor do ingresso : ${valorIngresso}`)
+      console.log("Valor total : ",valorIngresso * quantIngresso )
+
+
+
+
+
+
+    
