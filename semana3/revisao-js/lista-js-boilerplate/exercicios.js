@@ -1,10 +1,12 @@
 //Exercício 1
 
 function inverteArray(array) {
-  // implemente sua lógica aqui
+// implemente sua lógica aqui
+ let  entrada =[]
+ while(array.length){
+    entrada.push(entrada.pop)
+ }
 
-  const novoArray =[]
-  
 
 }
 
@@ -18,9 +20,15 @@ function retornaNumerosParesElevadosADois (array) {
 //Exercício 3
 
 function retornaNumerosPares (array) {
-   // implemente sua lógica aqui
-   for(let i > 0;i )
-   const arrayPares =[]
+      let arrayVazio =[]
+  for(let i = 0;i < array.length; i++){
+     if(array[i] % 2 === 0){
+      arrayVazio = arrayVazio.push(array[i])
+     }
+  }
+  
+  
+   
    
 }
 
