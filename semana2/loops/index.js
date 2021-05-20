@@ -1,76 +1,81 @@
-                                //Exercícios de interpretação de código
-
-
- /*
-    1-
-        a)-O código está contando de 0 a 5, o resultado impresso será, 0,1,2,3,4.
-    --------------------------------------------------------------------------------
-    2-
-       a)- vai ser impresso os números 19,21,23,25,27,30
-       b)-
-
-    3-
-     a)-0,00,000,000
-*/
-
-
-/*exercicio de escrita*/
-
-/*1
-
-     const temPets = Number(prompt("Quantos bichinhos de estimação você tem?"))
-     let arrayNomes =[]
-    
-     if(temPets === 0){
-         console.log("Que pena!Você pode adotar um Pet!")
-     } else if(temPets > 0){
-         for(let i = 0; temPets > i;i++){
-            let solicitaNome = prompt("Que legal!Qual o nome deles?")
-            arrayNomes.push(solicitaNome)
-         }
-         
-     }
-     console.log(arrayNomes)
-*/
-
-
-        let arrayOriginal = [80,30,130, 40, 60,21, 70, 120,90,103, 110, 55,]
+/*const verificaPar = (numero, funcao) => {
+    console.log(numero)
+    if(numero  % 2 === 0){
+        const resultado = numero /2
+        funcao(resultado)
         
-     /*2
+    }
+}
 
-     
+const imprimeMensagem = (valor) =>{
+    console.log("O resultado da sua conta é: ", valor)
+}
+
+verificaPar(4,imprimeMensagem)
 
 
-     function imprimeValorOriginal(){
-         for(let i = 0; i < arrayOriginal.length; i++){
-            console.log(arrayOriginal[i])
-         }
-     }
+/* ---------------EXERCICIO 1 -------------------
+const verificaImpar = (numero,funcaoQueImprime)=>{
+    if (numero % 2 !==0){
+       funcaoQueImprime()
+    }
+}
 
-     function valorDivididoPordez (){
-         for(let i = 0; i < arrayOriginal.length;i++){
-            console.log(arrayOriginal[i]/10)
-         }
-         
-     }
-     */
 
-     //c) Escreva um programa que **crie** um novo array contendo, 
-     //somente, os números pares do array original e **imprima** esse novo array
-/*
-     function contemParesApenas(){
-         for(let i = 0 ; i < arrayOriginal.length; i++){
-              if(arrayOriginal[i] %2 === 0){
-                  console.log(arrayOriginal[i])
-              }
-             }
-         }
+const mandaMensagem = () =>{
+    console.log("É impar!!!")
+}
 
+verificaImpar(3,)
+verificaImpar(3, mandaMensagem)
 */
-     
+/*
+const listaDeNumbers = [1,2,3,4,5,6,7,8]
+
+const novaLista = listaDeNumbers.map((index,valor) =>{
+    return  ` O elemento ${index} é valor${valor}`
+})
+
+console.log(novaLista)
+*/
+/*
+const habitosPodres = [{'fumar} { beber'} {'cheira'},{'comer travesti'}]
 
 
+const habitosParaMudar = habitosPodres.map((index,habitos) =>{
+    return ` você deve para de fazer isso ${habitos}`
+})
+console.log(habitosPodres)
+*/
+/*
+const listaDeNumeros =[1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80]
 
-       //contemParesApenas()
-     //valorDivididoPordez()
-     //imprimeValorOriginal()
+
+const numerosMaioresQueDez = listaDeNumeros.filter((numero) => {
+        return listaDeNumeros  >= 10
+})
+
+console.log(numerosMaioresQueDez)
+
+*/cls
+
+const produtos = [
+    { nome: "Alface Lavada", categoria: "Hortifruti", preço: 2.5 },
+    { nome: "Guaraná 2l", categoria: "Bebidas", preço: 7.8 },
+    { nome: "Veja Multiuso", categoria: "Limpeza", preço: 12.6 },
+    { nome: "Dúzia de Banana", categoria: "Hortifruti", preço: 5.7 },
+    { nome: "Leite", categoria: "Bebidas", preço: 2.99 },
+    { nome: "Cândida", categoria: "Limpeza", preço: 3.30 },
+    { nome: "Detergente Ypê", categoria: "Limpeza", preço: 2.2 },
+    { nome: "Vinho Tinto", categoria: "Bebidas", preço: 55 },
+    { nome: "Berinjela kg", categoria: "Hortifruti", preço: 8.99 },
+    { nome: "Sabão em Pó", categoria: "Limpeza", preço: 10.80 }
+ ]
+ 
+
+ const categorisLimpeza = protudos.filter((produto) => {
+    return produto.categoria ==="Limpeza"
+ })
+
+ console.log(`produtos  de limpeza ${categoria}`)
+ 
