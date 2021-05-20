@@ -74,6 +74,7 @@ div img {
     background-color: #2274a5;
     color: white;
     padding-top: 250px;
+    word-wrap: break-word;
 }
 
 #container-de-descricao>ol {
