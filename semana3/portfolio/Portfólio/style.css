@@ -1,0 +1,76 @@
+/*resetando configurações da página*/
+body {
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;   
+    color: #030303;
+}
+
+/*Header*/
+
+.header-container {
+    height: 100vh;
+    width:  100vw;
+    background-color: rgb(228, 228, 228);
+    background-image:  url('/img/profile2.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size:contain;
+    border-image:solid 5% #0303 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 112px;
+    position: relative;
+}  
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+
+
+.social-media {
+    display: flex;
+}
+
+.social-media a{
+    text-decoration: none;
+    color:#2d2d2e ;
+    padding: 1rem 5rem;
+    border: 1px solid #1E1E2A;
+    min-width:4rem;
+    display:  inline;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out ;
+}   
+
+a:hover{
+    background-color: #4b4949;
+    color:rgb(255, 255, 255) ;
+}
+
+.menu-items ul li {
+    list-style: none;
+    padding: 0;
+    display:inline-block;
+    border: solid 1px;
+    
+   
+  
+  
+}
+ .menu-items ul li a{
+     text-decoration: none;
+     padding: 20px;
+     position: relative;
+     margin-top: 0px;
+     
+ }
+
+
