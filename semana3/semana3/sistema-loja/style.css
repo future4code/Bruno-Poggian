@@ -1,0 +1,72 @@
+body{
+    background-image: image();
+    
+}
+#cabecalho{
+    background-color: rgb(10, 7, 3);
+    color: lavender;
+    height: 200px;
+}
+#logo{
+    height: 200px;
+    width: auto;
+
+}
+
+#menu ul{
+    padding:0px;
+    margin: 0px;
+    
+    list-style: none;
+}
+#menu ul li { 
+    display: inline;
+    align-items: center;
+ }
+
+
+#menu ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+    float: right;
+
+
+    background-color:#0a0000;
+    color: rgb(252, 207, 7);
+    text-decoration: none;
+    border-bottom:3px solid #795003;
+}
+
+#menu ul li a:hover {
+    background-color:#795003;
+    color: #000000;
+    border-bottom:3px solid #EA0000;
+}
+
+}
+#container-icones{
+    height: 5px;
+    width: 5px;
+}
+
+.icone{
+    height: 30px;
+    width: 30px;
+   
+}
+
+#centro-da-pagina{
+    height: auto;
+    width: auto ;
+    
+    background-color: rgb(182, 117, 57);
+}
+#fundo{
+    height: auto;
+    width: 900px;
+   margin-left: 200px;
+
+}
+footer{
+    
+}
