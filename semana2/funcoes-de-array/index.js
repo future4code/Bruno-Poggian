@@ -2,9 +2,12 @@
                                     EXERCICIOS DE INTERPRETAÇÃO DE CÓDIGO
  
  1-
-        a)-  vai sair na tela o nome dos usarios.
+        a)- {nome :"Amanda Rangel",apelido: "Mandi"}, 0 ,e imprime o array completo,
+            {nome:"Lais  Petra", apelido: "Laura"}, 1, e imprime o array completo,
+            {nome:"Leticia Chijo, apelido: "Chijo"}, 2, e imprime o array completo,
+
 ------------------------------------------------------------------------------------------------------
-2-vai logar  nome: {"Amanda Rangel", },{ nome: "Laís Petra" },{ nome: "Letícia Chijo"}
+2-vai logar  nome: ["Amanda Rangel",nome: "Laís Petra", nome: "Letícia Chijo"]
 
 -------------------------------------------------------------------------------------------------------
 
@@ -29,7 +32,7 @@ const pets = [
         return dog.nome
     })
 
-    console.log(nomeDosDoguinhos)
+    console.log("Resposta a :",nomeDosDoguinhos)
 
   
 //b-
@@ -42,16 +45,16 @@ console.log (apenasSalsicha)
 //c-
 
     const checaRaca = pets.filter((racaDoDesconto) =>{
-        return racaDoDesconto === 'Poodle'
+        return racaDoDesconto.raca === "Poodle"
     })
 
-    const descontoPoodle = pets.map((racaDoDesconto )=>{
-        return  racaDoDesconto.nome
+    const descontoPoodle = checaRaca.map((racaDoDesconto )=>{
+        return  `Você ganhou um cupom de desconto de 10% para tosar o/a ${racaDoDesconto.nome}`
 
     })
 
    
-    console.log("Você ganhou um cupom de desconto de 10% para tosar o/a",descontoPoodle )
+    console.log("Resposta -c :",descontoPoodle )
  */
 
  const produtos = [
@@ -68,32 +71,89 @@ console.log (apenasSalsicha)
 ]  
 
     /*a)-
-    const apenasNome = apenasBebida.map((nomeProduto) =>{
+    const apenasNome = produtos.map((nomeProduto) =>{//Eu estava colocando  o nome do item  a ser mapeado errado,valeu Chijo!
         return nomeProduto.nome
     })
     
     console.log(apenasNome)
-*/
 
+    */
     /*b)-
+        const produtosComDesconto = produtos.map((prodPromo) =>{
+            return {nome: prodPromo.nome, preco: (prodPromo.preco * 0.95).toFixed(2)}
+        })      
 
-    const nomeEpreco = faiô não entendi
+        console.log("resposta b- ", produtosComDesconto)
+
     */
 
-    //c-
-
- 
-
-/*
+        /*c-
         const apenasBebida = produtos.filter((nomeProduto) =>{
             return nomeProduto.categoria === "Bebidas"
         })
 
         console.log(apenasBebida)
 
- */
+ 
+*/
+        /*d-
+            const apenasYpe = produtos.filter((nomesYpe) =>{
+                return nomesYpe.nome.includes("Ypê")
+            })
 
-        //d-
+            const mensagemYpe = apenasYpe.map((onlyYpe) =>{
+                    return `Compre ${onlyYpe.nome} por ${onlyYpe.preco.toFixed(2)}.`
+            })
+            console.log(mensagemYpe)
+
+            */
+
+           // ------------------------------------------------------------------------------------------------
+            //                                        DESAFIO
+            //------------------------------------------------------------------------------------------------
 
 
-        //Gente não consegui fazer vai acabar o tempo.
+            const pokemons = [
+                { nome: "Bulbasaur", tipo: "grama" },
+                { nome: "Bellsprout", tipo: "grama" },
+                { nome: "Charmander", tipo: "fogo" },
+                { nome: "Aulpix", tipo: "fogo" },
+                { nome: "Squirtle", tipo: "água" },
+                { nome: "Psyduck", tipo: "água" },
+             ]
+
+             const pokemonEmOrdemAlfabetica = pokemons.map((nomepokemon) =>{
+                 return nomepokemon.nome
+             })
+
+            console.log(pokemonEmOrdemAlfabetica.sort())
+
+
+            
+            
+
+            function calculaPrimo(num){
+                if(num % i === 0)
+                
+            }
+
+
+            calculaArea(10,10)
+
+            1
+2
+3
+4
+5
+6
+7
+const calculaPrimo = (num) => {
+  for (let i = 2; i < num; i++)
+    if (num % i === 0) {
+      return false;
+    }
+  return num > 1;
+};
+
+       
+  
