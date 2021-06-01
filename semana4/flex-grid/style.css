@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    height: 40px;
+    padding: 10px;
+    background-color: mediumvioletred;
+    display:flex;
+    justify-content:space-between;
+
+}
+body{
+    
+}
+
+main{
+    display:flex;
+    background-color: #f2d0e0;
+
+
+}
+
+main #menu{
+
+}
+
+#fotos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+#fotos .foto{
+    
+    height: 200px;
+}
+
+footer{
+    display: flex;
+    align-items: flex-end;
+    height: 50px;
+    padding: 10px;
+    background-color: mediumvioletred;
+    justify-content: center;
+
+}
+
