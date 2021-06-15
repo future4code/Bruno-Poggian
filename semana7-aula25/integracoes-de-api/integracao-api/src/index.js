@@ -1,17 +1,23 @@
-import React from 'react';
+//importar módulos
+import React from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// importei os componentes
+import Formulario from './components/Formulario';
+import BotaoEnviar from './components/BotaoEnviar';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Componente do aquivo index.js
+
+class Principal extends React.Component{
+    render(){
+        return(
+            <div>
+                <Formulario/>
+                <BotaoEnviar/>
+            </div>
+        );
+    }
+}
+
+//Render
+ReactDOM.render(<Principal/>,document.getElementById('root'));
