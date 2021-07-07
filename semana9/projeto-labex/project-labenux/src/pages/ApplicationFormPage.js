@@ -6,10 +6,10 @@ export default function ApplicationFormPage(){
 
     return(
         <div>
-            <form id="formConfig">
+            <form className="formConfig">
                 <h1>Selecione uma viagem</h1>
                 <select>
-                    <option value="" placeholder="Escolha sua viagem"></option>
+                <option value="" placeholder="Escolha sua viagem"></option>
                 </select>
                 <input/>
                 <input/>
