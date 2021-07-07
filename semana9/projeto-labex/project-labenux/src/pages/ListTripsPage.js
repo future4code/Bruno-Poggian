@@ -8,7 +8,7 @@ const ListTripsPage =()=>{
     }
 
     const applyForTrip=()=>{
-        history.push("/appfortrip")
+        history.push("/applyfortrip")
     }
 
     return(
