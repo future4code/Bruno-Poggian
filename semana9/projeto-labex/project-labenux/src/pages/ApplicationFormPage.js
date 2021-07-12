@@ -1,8 +1,15 @@
 import React from 'react'
 import './ApplicationFormPageStyle.css'
+import { useHistory } from 'react-router'
 
 
 export default function ApplicationFormPage(){
+
+    const history = useHistory()
+
+    const backToHome=()=>{
+        history.push("/")
+    }
 
     return(
         <div>
@@ -18,6 +25,7 @@ export default function ApplicationFormPage(){
                 <select>
                     <option value="" placeholder="Escolha sua viagem"></option>
                 </select>
+                <button onClick={backToHome}>Voltar</button>
             </form>
         </div>
     )

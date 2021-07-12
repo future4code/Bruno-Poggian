@@ -3,12 +3,16 @@ import {CreateTripPage} from './CreateTripPage'
 import { TripDetailsPage } from "./TripDetailsPage";
 import React from 'react';
 import { useHistory } from 'react-router';
+import axios from 'axios'
 
 
 
 
- const AdminHomePage= ()=>{
+ function AdminHomePage(){
+
+
     const history = useHistory()
+
 
     const backToHome =()=>{
         history.replace("/")
@@ -20,6 +24,15 @@ import { useHistory } from 'react-router';
 
     const goToTripDetail =()=>{
         history.push("/tripDetail")
+    }
+    const getProtectedData=()=>{
+        const token = window.localStorage.setItem("token",response.data.token)
+
+        axios.get("https:minha-api.com/login"),{
+            headers:{
+                Authorizathion: token
+            }
+        }
     }
 
     
