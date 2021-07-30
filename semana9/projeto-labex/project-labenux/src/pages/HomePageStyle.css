@@ -1,0 +1,29 @@
+.initialFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 350px;
+    min-height: 350px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+body{  
+    color: #fff;
+    background-image: url("../img/maxresdefault.png");  
+    background-size: cover;
+}
+
+#logo{
+text-align: center;
+   padding: 0;
+   margin: 0;
+}
+
+
+
