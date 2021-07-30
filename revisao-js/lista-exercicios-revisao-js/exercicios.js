@@ -1,13 +1,13 @@
 // // // EXERCÍCIO 01
-// function inverteArray(array) {
-//     let arrayInvertido = [];
-//     for(let i = array.length -1; i >= 0 ; i--){
-//       console.log(arrayInvertido)
-//      arrayInvertido.push(array[i])
-//     }
-//     return arrayInvertido
-//     console.log(arrayInvertido);
-// }
+function inverteArray(array) {
+    let arrayInvertido = [];
+    for(let i = array.length -1; i >= 0 ; i--){
+      console.log(arrayInvertido)
+     arrayInvertido.push(array[i])
+    }
+    return arrayInvertido
+    console.log(arrayInvertido);
+}
 // // inverteArray([1,2,3,4,5]);
 
 // // // EXERCÍCIO 02
@@ -214,33 +214,71 @@ function multiplicaArrayPor2(array) {
 
 // // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-
+  const novoArray = array.map((num) => {
+    return (num * 2).toString()
+  })
+  return novoArray
 }
 
-// // EXERCÍCIO 17C
-// function verificaParidade(array) {
 
-// }
+// // EXERCÍCIO 17C
+function verificaParidade(array) {
+  const novoArray = array.map((num)=>{
+    if(num % 2 === 0){
+      return `${num} é par`
+    }else{
+      return `${num} é ímpar`
+    }
+    
+  })
+  return novoArray
+}
 
 // // EXERCÍCIO 18A
-// function retornaPessoasAutorizadas(pessoas) {
+function retornaPessoasAutorizadas (pessoas) {
+  let pessoasAutorizadas =[];
+  for(const pessoa of pessoas){
+    if(pessoa.altura >=1.5 && pessoa.idade >14 && pessoa.idade < 60){
+      pessoasAutorizadas.push(pessoa)
+    }
+  }
+  return pessoasAutorizadas;
+}
 
-// }
 
 // // EXERCÍCIO 18B
-// function retornaPessoasNaoAutorizadas(pessoas) {
-
-// }
+function retornaPessoasNaoAutorizadas(pessoas) {
+  let naoAutorizadas =[];
+  for(const pessoa of pessoas){
+    if(pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade > 60){
+      naoAutorizadas.push(pessoa)
+    }
+  }
+  return naoAutorizadas;
+}
 
 // // EXERCÍCIO 19A
-// function ordenaPorNome(consultasNome) {
+function ordenaPorNome(consultasNome) {
+  for(let i =0; i <consultasNome.length;i++) {
+    for(let j = 0; j < consultasNome.length -i-1;j++){
 
-// }
+    }
+  }
+}
 
 // // EXERCÍCIO 19B
-// function ordenaPorData(consultasData) {
+function ordenaPorData(consultasData) {
+  for (let i=0; i< consultasData.length;i++){
+    for(let j=0; j < consultasData.length -i -1;j++) {
+      
+      const arrayData1 = consultasData[j].dataDaConsulta.split('/')
+      const dia1 = Number (arrayData1[0])
+      const mes1 = Number (arrayData1[1])
+      const ano1 = Number (arrayData1[2])
+    }
 
-// }
+  }
+}
 
 // // EXERCÍCIO 20
 // // function calculaSaldo(contas) {
